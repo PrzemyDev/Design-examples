@@ -1,4 +1,3 @@
 # Design
  
-• Szablon CV (C# - WPF)  
-  Z możliwością eksportu do pdf.
+• Szablon CV (C# - WPF) z możliwością eksportu do pdf.
