@@ -30,5 +30,28 @@ namespace CV
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                PrintDialog dlg = new PrintDialog();
+
+                Window currentMainWindow = Application.Current.MainWindow;
+
+                Application.Current.MainWindow = this;
+
+                if ((bool)dlg.ShowDialog().GetValueOrDefault())
+                {
+                    Application.Current.MainWindow = currentMainWindow;
+                    dlg.PrintVisual(this, "CV");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

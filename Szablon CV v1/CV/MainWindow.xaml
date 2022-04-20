@@ -32,7 +32,8 @@
                     BorderBrush="#303030"
                     BorderThickness="2.5">
                 <Image Source="Resources/icons/manVectorsMarketFlaticon.png"
-                       Opacity="0.8"/>
+                       Opacity="0.8"
+                       MouseDown="Image_MouseDown"/>
             </Border>
             <!--Kontakt-->
             <Border Grid.Row="1" Background="#353535"
