@@ -321,7 +321,8 @@
                     <StackPanel>
                         <Label Content="Czarodzieje WPF"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Młodszy programista"
+                        <TextBlock Text="Młodszy programista"
+                                   TextWrapping="Wrap"
                            FontSize="14" Padding="5 0"/>
                     </StackPanel>
                 </Border>
@@ -340,7 +341,8 @@
                     <StackPanel>
                         <Label Content="Massive Bit Warlord Games"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Młodszy tester oprogramowania"
+                        <TextBlock Text="Młodszy tester oprogramowania"
+                                   TextWrapping="Wrap"
                            FontSize="14" Padding="5 0"/>
                     </StackPanel>
                 </Border>
@@ -358,8 +360,8 @@
                     <StackPanel>
                         <Label Content="Massive Bit Warlord Games"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Praktyka zawodowa"
-                           FontSize="14"
+                        <TextBlock Text="Praktyka zawodowa"
+                           FontSize="14" TextWrapping="Wrap"
                                Padding="5 0"/>
                     </StackPanel>
                 </Border>
@@ -400,7 +402,7 @@
                     <StackPanel>
                         <Label Content="Wyższa Szkoła Technologii Informacji"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Informatyk"
+                        <TextBlock Text="Informatyk" TextWrapping="Wrap"
                            FontSize="14" Padding="5 0"/>
                     </StackPanel>
                 </Border>
@@ -419,8 +421,8 @@
                     <StackPanel>
                         <Label Content="Technikum Informatyczne"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Technik informatyk, kwalifikacje ABC92&#xa;Pozytywnie zdany egzamin dojrzałości "
-                           FontSize="14" Padding="5 0 "/>
+                        <TextBlock Text="Technik informatyk, kwalifikacje ABC92&#xa;Pozytywnie zdany egzamin dojrzałości "
+                           TextWrapping="Wrap" FontSize="14" Padding="5 0 "/>
                     </StackPanel>
                 </Border>
 
@@ -437,7 +439,7 @@
                     <StackPanel>
                         <Label Content="Szkoła"
                            FontSize="16" FontWeight="Bold"/>
-                        <Label Content="Uczeń"
+                        <TextBlock Text="Uczeń" TextWrapping="Wrap"
                            FontSize="14"
                                Padding="5 0"/>
                     </StackPanel>
