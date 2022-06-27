@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.Views.NewsDetails"
+             Background="DarkOrange">
+    <Shell.TitleView>
+         <Label x:Name="SelectedArticle" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" Padding="0,0,55,0"
+               Margin="0,10,0,0"/>
+        </Shell.TitleView>
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+            <Grid RowSpacing="0">
+                <StackLayout  Background="White">
+                    <Image x:Name="ImageCall" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackLayout  Orientation="Vertical" Background="White">
+                    <StackLayout Orientation="Vertical" Margin="5">
+                        <Label x:Name="TitleCall" FontSize="Medium" Margin="0,-5,0,0"/>
+                        <Label x:Name="DateCall" FontSize="Small" />
+                    </StackLayout>
+                    <ScrollView>
+                        <Label x:Name="DescriptionCall" Margin="5" />
+                    </ScrollView>
+                </StackLayout>
+
+             </Grid>
+    </Grid>
+</ContentPage>

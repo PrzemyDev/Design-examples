@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.Controls.FlyoutHeader"
+             HeightRequest="200">
+  <ContentView.Content>
+      <Grid>
+            <Image Aspect="AspectFill"
+               Source="pexelsAntonioBatinic5371646.jpg"
+               Opacity="0.8" />
+
+            <Label Text="RallyApp"
+               TextColor="Orange"
+               FontAttributes="Italic"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,5,0,0"/>
+            <Label Text="RallyApp"
+               TextColor="White"
+               FontAttributes="Italic"
+               FontSize="21"
+                   Opacity="0.8"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,5,0,0"/>
+
+        </Grid>
+  </ContentView.Content>
+</ContentView>

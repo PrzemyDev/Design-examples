@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.Controls.FlyoutFooter">
+  <ContentView.Content>
+      <StackLayout BackgroundColor="DarkOrange">
+            <Label Text="PrzemyDev 2022"
+               TextColor="Black"
+               FontAttributes="Italic"
+               FontSize="Medium"
+               HorizontalTextAlignment="Center"
+               Margin="0,5,0,0"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

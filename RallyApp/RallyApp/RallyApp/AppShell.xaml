@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.AppShell"
+            xmlns:views="clr-namespace:RallyApp.Views"
+            xmlns:controls="clr-namespace:RallyApp.Controls"
+       BackgroundColor="Orange">
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="White" Offset="0.1"/>
+            <GradientStop Color="Orange" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+    
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader/>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter/>
+    </Shell.FlyoutFooter>
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Wiadomości" ContentTemplate="{DataTemplate views:NewsPage}"
+                      Icon="flaticonFreepik.png"/>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Wyniki" ContentTemplate="{DataTemplate views:ResultsPage}"
+                      Icon="flaticonyut1655FF.png"/>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Klasyfikacja" ContentTemplate="{DataTemplate views:Standings}"
+                      Icon="flaticonFreepikSt.png"/>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Zawodnicy" ContentTemplate="{DataTemplate views:CompetitorPage}"
+                      Icon="flaticonFreepikHm.png"/>
+    </FlyoutItem>
+
+</Shell>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyApp.Android", "RallyApp\RallyApp.Android\RallyApp.Android.csproj", "{90D0C4A2-7073-40B8-8EC1-A35542120E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyApp", "RallyApp\RallyApp\RallyApp.csproj", "{16D1C05A-6943-42FA-B0AB-AFF8D831301A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D0C4A2-7073-40B8-8EC1-A35542120E05}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D1C05A-6943-42FA-B0AB-AFF8D831301A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {719797CE-0021-4B09-8462-D2ABBD8B8070}
+	EndGlobalSection
+EndGlobal

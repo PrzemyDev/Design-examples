@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.Views.CompetitorDetails">
+    <Shell.TitleView>
+        <Label x:Name="SelectedCompetitor" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center" Padding="0,0,55,0"
+               Margin="0,10,0,0"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout Margin="6,6" >
+                <Image x:Name="ImageCall" WidthRequest="80" HeightRequest="
+                       96"/>
+                <StackLayout Margin="15,0">
+                    <Label x:Name="NameCall" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Narodowość:" />
+                        <Image x:Name="NationalityCall" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="15,0">
+                    <Label Text="Statystyki:"
+                       FontSize="18" />
+                    <Label Text="• Liczba startów: 67"
+                       FontSize="16" />
+                    <Label Text="• Zwycięstwa 8"
+                       FontSize="16" />
+                    <Label Text="• Zwycięstwa w klasie: 20 "
+                       FontSize="16" />
+                </StackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="8,0"/>
+                <StackLayout Margin="15,0">
+                    <Label Text="Starty 2016"
+                       FontSize="18" />
+                    <Label Text="1. Rally Coppa Città di Lucca"
+                       FontSize="16" />
+                    <Label Text="2. Rallye Automobile de Monte-Carlo."
+                       FontSize="16" />
+                </StackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="8,0"/>
+                <StackLayout Margin="15,0">
+                    <Label Text="Starty 2015"
+                       FontSize="18"/>
+                    <Label Text="4. Wales Rally GB"
+                       FontSize="16" />
+                    <Label Text="RallyRACC Catalunya - Costa Daurada"
+                       FontSize="16" />
+                </StackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="Gray" Margin="8,0"/>
+                <StackLayout Margin="15,0">
+                    <Label Text="Sukcesy"
+                       FontSize="18"/>
+                    <Label Text="2002. Drugie miejsce: Włoska Formuła Renault 2000"
+                       FontSize="16" />
+                    <Label Text="2005: Pierwsze miejsce: Formuła Renault 3.5"
+                       FontSize="16" />
+                    <Label Text="2008: Pierwsze miejsce: F1 Grand Prix Kanady"
+                       FontSize="16" />
+                    <Label Text="2013: Pierwsze miejsce: Rajdowe mistrzostwa świata WRC-2"
+                       FontSize="16" />
+                    <Label Text="2021: Pierwsze miejsce: European Le Mans Series"
+                       FontSize="16" />
+                    <Label Text="2022: Drugie miejsce: European Le Mans Series (LMP2)"
+                       FontSize="16" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
