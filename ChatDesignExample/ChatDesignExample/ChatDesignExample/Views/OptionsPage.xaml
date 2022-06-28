@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatDesignExample.Views.OptionsPage"
+              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#303030">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="#202020">
+                <StackLayout Orientation="Horizontal" Spacing="17">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="staticavatar.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="PrzemyDev"
+                                    TextColor="White"
+                                   Margin="5,5,5,-5"
+                                   FontSize="16"/>
+                            <Label Text="Widoczny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            <ImageButton Source="WhiteopenEye.png" BackgroundColor="Transparent"
+                                   WidthRequest="25" HeightRequest="25"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout BackgroundColor="Transparent" VerticalOptions="Center">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Zbyszek"
+                                    TextColor="White"
+                                   Margin="5,-20,5,-5"
+                                   FontSize="16"/>
+                            <Label Text="Widoczny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <ImageButton Source="mobileSettings.png" HeightRequest="28" WidthRequest="28" 
+                                 BackgroundColor="Transparent"
+                             Command="{Binding SwitchToChatCommand}"/>
+                </StackLayout>
+            </Grid>
+
+
+            <ScrollView Grid.Row="1" VerticalOptions="FillAndExpand">
+                <Grid>
+                    <StackLayout Orientation="Vertical" Margin="15" Spacing="15">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Zbyszek" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Dostępny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend1" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Dostępny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend2" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Niedostępny"
+                                TextColor="Red"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend3" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Dostępny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend4" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Niedostępny"
+                                TextColor="Red"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend5" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Dostępny"
+                                TextColor="LightGreen"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="60" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"
+                                   Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent">
+                                <Image Source="dominojachas.png" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                            <StackLayout Orientation="Vertical" >
+                                <Label Text="Friend6" TextColor="White" FontSize="Title"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Label Text="Niedostępny"
+                                TextColor="Red"
+                                Margin="5,-5,5,-5"
+                                FontSize="12"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+
+
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+
+            <Grid Grid.Row="2">
+                <StackLayout>
+                    <Label Text="Ustawienia"  TextColor="White" HorizontalOptions="Center" FontSize="Title"/>
+                    <Entry BackgroundColor="#404040" HorizontalOptions="Fill" TextColor="White"/>
+                    <Label Text="Szyfrowanie: Losowe | Własne" TextColor="White" FontSize="Title"/>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center"
+                                 Margin="50,0,0,0">
+                        <Switch OnColor="#404040" ThumbColor="White"/>
+                        <Switch ThumbColor="White" OnColor="#404040"/>
+                    </StackLayout>
+                    <Label Text="Połączenie: Serwer | Bezpośrednie" TextColor="White" FontSize="Title"/>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center"
+                                 Margin="50,0,0,0">
+                        <Switch OnColor="#404040" ThumbColor="White"/>
+                        <Switch ThumbColor="White" OnColor="#404040"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
