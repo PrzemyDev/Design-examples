@@ -2,11 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RallyApp.Views.ResultsPage">
+    <Shell.TitleView>
+        <Label Text="Wyniki" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center" Padding="0,0,65,0"
+               Margin="0,10,0,0"/>
+    </Shell.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Strona w budowie" FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="4">
+                <Label Text="OS 11 LUBENIA" FontSize="Large" HorizontalOptions="Center"/>
+            </Grid>
+            <ListView ItemsSource="{Binding Results}" HasUnevenRows="True" SeparatorVisibility="Default"
+                      Grid.Row="1" Grid.ColumnSpan="4" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="12" BorderColor="lightgray">
+                                <StackLayout Orientation="Horizontal" Spacing="15" Margin="12,0">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Poz." HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Position}" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Nr."/>
+                                        <Label Text="{Binding Number}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Klasa" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding CarClass}" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Start" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Start}" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Czas" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding Time}" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Różn -> 1" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding DiffToFirst}" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

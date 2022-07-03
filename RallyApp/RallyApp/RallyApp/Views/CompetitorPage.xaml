@@ -43,7 +43,7 @@
             </ListView>
         </Grid>
         <Grid Grid.Row="1" BackgroundColor="Yellow">
-            <Label Text="W trakcie budowy!" HorizontalOptions="Center" FontSize="Large" />
+            <Label Text="Strona w budowie" HorizontalOptions="Center" FontSize="Large" />
         </Grid>
     </Grid>
 </ContentPage>
