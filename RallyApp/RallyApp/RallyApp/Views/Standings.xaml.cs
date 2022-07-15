@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RallyApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,14 @@ namespace RallyApp.Views
         public Standings()
         {
             InitializeComponent();
+            this.BindingContext = new StandingsViewModel();
+        }
+
+        async private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+             var details = e.CurrentSelection.FirstOrDefault() as Season;
+             await Navigation.PushAsync(new StandingsDetails(details.SeasonNumber));
+            
         }
     }
 }

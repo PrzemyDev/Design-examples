@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RallyApp.Views.StandingsDetails"
+             Background="Orange">
+    <Shell.TitleView>
+        <Label x:Name="SelectedSeason" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center" Padding="0,0,65,0"
+               Margin="0,10,0,0"/>
+    </Shell.TitleView>
+
+    <StackLayout Orientation="Vertical" Spacing="0" Margin="3,5">
+
+        <Frame BorderColor="Black" HeightRequest="60" Padding="0" Background="DarkOrange">
+            <Grid Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Margin="10,0" Text="Pos" VerticalOptions="Center"  Grid.Column="0" />
+                <Label Margin="10,0" Text="Driver" VerticalOptions="Center"  Grid.Column="1" />
+                <Label Margin="10,0" Text="Team" VerticalOptions="Center"  Grid.Column="2" />
+                <Label Margin="10,0" Text="Pts" VerticalOptions="Center"  Grid.Column="3" />
+
+                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+            </Grid>
+        </Frame>
+
+        <ListView ItemsSource="{Binding Standings}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BorderColor="Black" HeightRequest="60" Padding="0">
+                            <Grid Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="2.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Margin="10,0" Text="{Binding Position}" VerticalOptions="Center"  Grid.Column="0" />
+                                <Label Margin="10,0" Text="{Binding Driver}" VerticalOptions="Center"  Grid.Column="1" />
+                                <Label Margin="10,0" Text="{Binding Team}" VerticalOptions="Center"  Grid.Column="2" />
+                                <Label Margin="10,0" Text="{Binding Points}" VerticalOptions="Center"  Grid.Column="3" />
+
+                                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

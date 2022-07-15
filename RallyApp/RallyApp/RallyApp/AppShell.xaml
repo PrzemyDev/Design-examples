@@ -28,7 +28,7 @@
                       Icon="flaticonyut1655FF.png"/>
     </FlyoutItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Klasyfikacja" ContentTemplate="{DataTemplate views:Standings}"
+        <ShellContent Title="Klasyfikacje" ContentTemplate="{DataTemplate views:Standings}"
                       Icon="flaticonFreepikSt.png"/>
     </FlyoutItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">

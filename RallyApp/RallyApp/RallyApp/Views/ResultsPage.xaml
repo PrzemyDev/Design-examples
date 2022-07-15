@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RallyApp.Views.ResultsPage">
+             x:Class="RallyApp.Views.ResultsPage"
+             >
     <Shell.TitleView>
         <Label Text="Wyniki" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center" Padding="0,0,65,0"
                Margin="0,10,0,0"/>
@@ -18,7 +19,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.ColumnSpan="4">
-                <Label Text="OS 11 LUBENIA" FontSize="Large" HorizontalOptions="Center"/>
+                <Label Text="OS 11 LUBENIA" FontSize="Large" HorizontalOptions="Center" Margin="0,5,0,5"/>
             </Grid>
             <ListView ItemsSource="{Binding Results}" HasUnevenRows="True" SeparatorVisibility="Default"
                       Grid.Row="1" Grid.ColumnSpan="4" SelectionMode="None">
@@ -26,7 +27,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Frame CornerRadius="12" BorderColor="lightgray">
-                                <StackLayout Orientation="Horizontal" Spacing="15" Margin="12,0">
+                                <StackLayout Orientation="Horizontal" Spacing="15" Margin="15,0">
                                     <StackLayout Orientation="Vertical">
                                         <Label Text="Poz." HorizontalOptions="Center"/>
                                         <Label Text="{Binding Position}" HorizontalOptions="Center"/>
