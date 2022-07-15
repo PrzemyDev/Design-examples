@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatDesignExample.Views.LoggingPage"
+            NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#303030">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.RowSpan="2">
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#202020" Offset="0.0"/>
+                        <GradientStop Color="#404040" Offset="1"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
+            <StackLayout VerticalOptions="Center">
+                <Label  Text="Super GigaChat"
+                        FontFamily="Helvetica"
+                        FontSize="44"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" >
+                <StackLayout Orientation="Vertical">
+                    <Entry IsPassword="False" FontFamily="Helvetica"
+                         Placeholder="Username"
+                         FontSize="20"
+                         HorizontalTextAlignment="Center"
+                         TextColor="White"
+                         PlaceholderColor="White"
+                         WidthRequest="100"
+                         Opacity="0.7"
+                         HeightRequest="50"
+                        />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                    <Entry IsPassword="True" FontFamily="Helvetica"
+                         Placeholder="Password"
+                         FontSize="20"
+                         HorizontalTextAlignment="Center"
+                         TextColor="White"
+                         PlaceholderColor="White"
+                         WidthRequest="100"
+                         Opacity="0.7"
+                         HeightRequest="50"
+                        >
+
+                    </Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,50,0,0" HorizontalOptions="Center">
+                    <Button WidthRequest="100" HeightRequest="40" Text="LOGIN"
+                                x:Name="LoginButton"
+                                Command="{Binding TestCommand}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="CornerRadius" Value="9" />
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

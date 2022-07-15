@@ -180,7 +180,11 @@
             <Grid Grid.Row="2">
                 <StackLayout>
                     <Label Text="Ustawienia"  TextColor="White" HorizontalOptions="Center" FontSize="Title"/>
-                    <Entry BackgroundColor="#404040" HorizontalOptions="Fill" TextColor="White"/>
+                    <StackLayout Orientation="Vertical">
+                        <Entry BackgroundColor="#404040" HorizontalOptions="Fill" TextColor="White"
+                           x:Name="EntryEncriptionKey"/>
+                        <Button x:Name="EncryptionKeyButton" Text="Zatwierdź" WidthRequest="60" HeightRequest="60"/>
+                    </StackLayout>
                     <Label Text="Szyfrowanie: Losowe | Własne" TextColor="White" FontSize="Title"/>
                     <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" HorizontalOptions="Center"
                                  Margin="50,0,0,0">

@@ -10,8 +10,8 @@ namespace ChatDesignExample
         public App()
         {
             InitializeComponent();
+            MainPage = new NavigationPage(new LoggingPage());
 
-            MainPage = new NavigationPage(new ChatPage());
         }
 
         protected override void OnStart()
