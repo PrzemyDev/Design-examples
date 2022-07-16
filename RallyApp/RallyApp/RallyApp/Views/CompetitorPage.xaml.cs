@@ -39,7 +39,8 @@ namespace RallyApp.Views
             var tempCompList = competitorsViewModel.Competitors;
             if (NationalityPicker.SelectedIndex == -1 || NationalityPicker.SelectedItem.ToString() == "")
             {
-                CompetitorsList.ItemsSource = tempCompList.Where(x => x.Name.Contains(e.NewTextValue) || x.Surname.Contains(e.NewTextValue));
+                //CompetitorsList.ItemsSource = tempCompList.Where(x => x.Name.Contains(e.NewTextValue) || x.Surname.Contains(e.NewTextValue));
+                CompetitorsList.ItemsSource = tempCompList.Where(x => x.Name.ToLower().Contains(e.NewTextValue.ToLower()) || x.Surname.ToLower().Contains(e.NewTextValue.ToLower()));
             }
             else
             {
@@ -48,7 +49,7 @@ namespace RallyApp.Views
                 TemporaryVoid(ref flagTest, ref result);
                 var tempList = tempCompList.Where(x => x.Nationality.Contains(result));
                 //CompetitorsList.ItemsSource = tempCompList.Where(x => x.Name.StartsWith(e.NewTextValue) || x.Surname.StartsWith(e.NewTextValue));
-                CompetitorsList.ItemsSource = tempList.Where(x => x.Name.Contains(e.NewTextValue) || x.Surname.Contains(e.NewTextValue));
+                CompetitorsList.ItemsSource = tempList.Where(x => x.Name.ToLower().Contains(e.NewTextValue.ToLower()) || x.Surname.ToLower().Contains(e.NewTextValue.ToLower()));
             }
         }
 
