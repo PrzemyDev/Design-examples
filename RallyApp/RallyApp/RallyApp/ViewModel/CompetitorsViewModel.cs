@@ -18,10 +18,31 @@ namespace RallyApp.ViewModel
             });
             Competitors.Add(new Competitor
             {
-                Name = "Robert",
-                Surname = "K.",
+                Name = "Andrzej",
+                Surname = "Szyk",
                 Nationality = "https://www.ewrc-results.com/images/flags2/poland.png",
-                Image = "https://www.ewrc-results.com/photos/kubica.jpg"
+                Image = "https://www.ewrc-results.com/photos/unknow.jpg"
+            });
+            Competitors.Add(new Competitor
+            {
+                Name = "Harri",
+                Surname = "Rovenparä",
+                Nationality = "https://www.ewrc-results.com/images/flags2/finland.png",
+                Image = "https://www.ewrc-results.com/photos/rovanpera.jpg"
+            });
+            Competitors.Add(new Competitor
+            {
+                Name = "Kimi",
+                Surname = "Perkele",
+                Nationality = "https://www.ewrc-results.com/images/flags2/finland.png",
+                Image = "https://www.ewrc-results.com/photos/unknow.jpg"
+            });
+            Competitors.Add(new Competitor
+            {
+                Name = "Thierry",
+                Surname = "Neuville",
+                Nationality = "https://www.ewrc-results.com/images/flags2/belgium.png",
+                Image = "https://www.ewrc-results.com/photos/neuville_thierry.jpg"
             });
         }        
 

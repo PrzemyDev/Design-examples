@@ -6,50 +6,59 @@
         <Label Text="Zawodnicy" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center" Padding="0,0,55,0"
                Margin="0,10,0,0"/>
     </Shell.TitleView>
-    <Shell.SearchHandler>
-        <SearchHandler Placeholder="Wyszukaj" 
-                       BackgroundColor="white"
-                       PlaceholderColor="black"
-                       TextColor="black"/>
-    </Shell.SearchHandler>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid>
-            <ListView ItemsSource="{Binding Competitors}" HasUnevenRows="True" SeparatorVisibility="Default" 
-                  ItemTapped="ListView_ItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
 
-                                <StackLayout Grid.Column="0">
-                                    <Image  VerticalOptions="Fill" Source="{Binding Image}"
+        <Grid>
+            <StackLayout Orientation="Vertical">
+                
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Grid ColumnDefinitions="3.2*,*,Auto" BackgroundColor="DarkOrange">
+                        <SearchBar x:Name="SearchBarCompetitor" Placeholder="Wyszukaj" TextChanged="SearchBar_TextChanged" Grid.Column="0"
+                               Margin="-15,0,0,0" TextColor="White" PlaceholderColor="White"/>
+                        <Picker  Grid.Column="1"  x:Name="NationalityPicker" Title="Kraj" SelectedIndexChanged="NationalityPicker_SelectedIndexChanged"
+                             Margin="0,-6" HorizontalTextAlignment="Center" TextColor="White" TitleColor="White"/>
+                        <ImageButton Source="icons8broom.png" x:Name="ImgBtnClearPicker" Clicked="BtnClearPicker_Clicked" Grid.Column="2"
+                                 BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30"
+                                 Margin="5,5" HorizontalOptions="End"/>
+                    </Grid>
+                </StackLayout>
+                
+
+                <ListView x:Name="CompetitorsList" ItemsSource="{Binding Competitors}" HasUnevenRows="True" SeparatorVisibility="Default" 
+                  ItemTapped="ListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout Grid.Column="0">
+                                        <Image  VerticalOptions="Fill" Source="{Binding Image}"
                                            HorizontalOptions="Start" HeightRequest="66" WidthRequest="60"/>
-                                </StackLayout>
-                                <StackLayout Grid.Column="1" >
-                                    <StackLayout Orientation="Vertical">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding Name} " />
-                                            <Label Text="{Binding Surname}" />
-                                        </StackLayout>
-                                        <Image Source="{Binding Nationality}" HorizontalOptions="Start" Aspect="AspectFill"/>
                                     </StackLayout>
-                                </StackLayout>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
-        <Grid Grid.Row="1" BackgroundColor="Yellow">
-            <Label Text="Strona w budowie" HorizontalOptions="Center" FontSize="Large" />
+                                    <StackLayout Grid.Column="1" >
+                                        <StackLayout Orientation="Vertical">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{Binding Name} " />
+                                                <Label Text="{Binding Surname}" />
+                                            </StackLayout>
+                                            <Image Source="{Binding Nationality}" HorizontalOptions="Start" Aspect="AspectFill"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </Grid>
     </Grid>
 </ContentPage>

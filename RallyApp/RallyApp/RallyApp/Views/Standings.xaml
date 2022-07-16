@@ -26,7 +26,7 @@
                                 <RowDefinition Height="80" />
                                 <RowDefinition Height="20" />
                             </Grid.RowDefinitions>
-                            <StackLayout Orientation="Vertical" BackgroundColor="AntiqueWhite" Margin="0,0,0,-10">
+                            <StackLayout Orientation="Vertical" BackgroundColor="DarkOrange" Margin="0,0,0,-10">
                                 <Image Grid.Row="0"
                                    Source="{Binding Image}"
                                    Aspect="AspectFill"
@@ -36,6 +36,7 @@
                                 <Label Grid.Row="1"
                                    Text="{Binding SeasonNumber}"
                                    FontSize="Medium"
+                                   TextColor="White"
                                    HorizontalOptions="Center"
                                    LineBreakMode="TailTruncation"
                                    Margin="0,-5,0,0"/>

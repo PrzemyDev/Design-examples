@@ -24,7 +24,7 @@
                       Icon="flaticonFreepik.png"/>
     </FlyoutItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Wyniki" ContentTemplate="{DataTemplate views:ResultsPage}"
+        <ShellContent Title="Wyniki (Na żywo)" ContentTemplate="{DataTemplate views:ResultsPage}"
                       Icon="flaticonyut1655FF.png"/>
     </FlyoutItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
