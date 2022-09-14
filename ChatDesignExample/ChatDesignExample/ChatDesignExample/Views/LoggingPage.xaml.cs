@@ -18,12 +18,11 @@ namespace ChatDesignExample.Views
             this.BindingContext = this;
 
         }
-        public ICommand TestCommand => new Command(() => TestowyVoid());
+        public ICommand LoginVerificationCommand => new Command(() => LoginVerification());
 
 
-        void TestowyVoid()
+        void LoginVerification()
         {
-            
             Application.Current.MainPage.Navigation.InsertPageBefore(new ChatPage(), this);
             Application.Current.MainPage.Navigation.PopAsync();
         }

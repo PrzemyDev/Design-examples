@@ -50,16 +50,14 @@
                          PlaceholderColor="White"
                          WidthRequest="100"
                          Opacity="0.7"
-                         HeightRequest="50"
-                        >
-
+                         HeightRequest="50">
                     </Entry>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="0,50,0,0" HorizontalOptions="Center">
                     <Button WidthRequest="100" HeightRequest="40" Text="LOGIN"
                                 x:Name="LoginButton"
-                                Command="{Binding TestCommand}">
+                                Command="{Binding LoginVerificationCommand}">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="CornerRadius" Value="9" />
