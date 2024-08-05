@@ -1,7 +1,7 @@
 # Design examples
 
 • Chat app (C# - Xamarin.Forms): </br>
- design with custom encryption and connection settings.  
+ Chat design with custom encryption and connection settings.  
 
 • RallyApp (C# - Xamarin.Forms):</br>
 Rally guide app with working navigation, detail subpages and more.
