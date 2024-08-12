@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fancyGaem.Views.GameView"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Background>
+
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#454545"
+                          Offset="0.1" />
+            <GradientStop Color="#353535"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Background="#FF5555" Grid.ColumnSpan="3">
+                <StackLayout Orientation="Horizontal" Grid.Column="0">
+                    <Button Text="&lt; Back" Command="{Binding BackToMenuCommand}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Column="1">
+                    <Label Text="Score: " FontSize="Large" TextColor="White" VerticalOptions="Center"/>
+                    <Label x:Name="lblScore" Text="0" FontSize="Large" TextColor="White" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Column="2">
+                    <Label Text="PPS: " VerticalTextAlignment="Center"/>
+                    <Label x:Name="lblAdditionalPerSecond" Text="+3/s" FontSize="Large" TextColor="White" 
+                    VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Frame  Margin="0,60,0,205" CornerRadius="100" Opacity="0"  x:Name="frameInside"/>
+            <Frame  Margin="0,80,0,225" CornerRadius="100" Opacity="0"  x:Name="frameMiddle"/>
+            <Frame  Margin="0,100,0,245" CornerRadius="100" Opacity="0"  x:Name="frameOutside" />
+        </Grid>
+
+        <Grid Grid.Row="1" RowSpacing="0">
+            <Grid.RowDefinitions>   
+                <RowDefinition Height="0.33*"/>
+                <RowDefinition Height="0.45*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,35,0,0" >
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label x:Name="lblUpperOne"  Text=" " FontSize="Title" TextColor="Wheat"
+                           IsVisible="true"/>
+                    <Label x:Name="lblUpperTwo" Text=" " FontSize="Title" TextColor="Wheat"
+                           IsVisible="true"/>
+                    <Label x:Name="lblUpperThree" Text=" " FontSize="Title" TextColor="Wheat"
+                           IsVisible="true"/>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+                <Frame BackgroundColor="Black" Opacity="0.25"/>
+                    <ImageButton Source="placeholderClickArea.png" HorizontalOptions="Center" VerticalOptions="Center"
+                        x:Name="imgBtnClickArea" Command="{Binding PPCAreaClickedCommand}" />
+            </Grid>
+            <Grid Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center"
+                  Margin="0,0,0,0" >
+                <Label x:Name="lblLowerOne" Text="Click!" FontSize="Title" TextColor="Wheat"
+                       IsVisible="false"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal" Grid.Row="3" >
+
+                <Slider MaximumTrackColor="Black"  HorizontalOptions="FillAndExpand"
+                    MinimumTrackColor="Black" 
+                    HeightRequest="50" 
+                    ThumbColor="Black"
+                    ThumbImageSource="oneStar.png" 
+                    Maximum="24"
+                    Value="21" />
+            </StackLayout>
+            
+        </Grid>
+        <Grid Grid.Row="2" >    
+            <Frame BackgroundColor="#FFFFFF" Margin="5,0" >
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Current Hour: 9pm, " FontSize="Medium" TextColor="Black"/>
+                    <Label Text="Shift hours: 8am - 4pm " FontSize="Medium" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Current multiplier: " FontSize="Medium" TextColor="Black"/>
+                        <Label Text="Work after-hours! (x2)" FontSize="Medium" TextColor="Red" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="3">
+            <StackLayout Orientation="Horizontal" Background="#FF5555" >
+                <Button Text="Upgrades" Command="{Binding GoToUpgradesCommand}" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

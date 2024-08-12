@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:local="clr-namespace:fancyGaem.Views"
+             x:Class="fancyGaem.Views.MenuView"
+             NavigationPage.HasNavigationBar="False"
+             x:DataType="local:MenuView"
+             Background="#252525">
+
+    <Grid RowDefinitions="Auto,*,0.5*">
+        <Grid Grid.Row="0" >
+            <StackLayout Orientation="Vertical" Background="#454545">
+                <Label Text="FancyGaem" TextColor="Wheat" FontSize="35" HorizontalTextAlignment="Center"/>
+                <Label x:Name="lblMenuDescription" Text="?desc?" TextColor="Wheat" FontSize="18" 
+                       HorizontalTextAlignment="Center" Margin="0,0,0,4"/>
+            </StackLayout>
+        </Grid>
+
+
+        <Grid Grid.Row="1" VerticalOptions="Center" Background="#454545">
+            <StackLayout Orientation="Vertical"  Padding="5">
+                <Button Text="Play" FontSize="Title" TextColor="Wheat" Background="#353535"
+                HorizontalOptions="CenterAndExpand" Command="{Binding PlayGameCommand}"/>
+                <Button Text="Help / about" FontSize="Title" TextColor="Wheat" Background="#353535"
+                HorizontalOptions="CenterAndExpand" Command="{Binding GoToHelpCommand}"/>
+                <Button Text="Settings" FontSize="Title" TextColor="Wheat" Background="#353535"
+                HorizontalOptions="CenterAndExpand" Command="{Binding GoToSettingsCommand}"/>
+                <Button Text="Exit" FontSize="Title" TextColor="Wheat" Background="#353535"
+                HorizontalOptions="CenterAndExpand" Command="{Binding ExitGameCommand}"/>
+            </StackLayout>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="End" Background="#101010">
+                <Label Text="Alpha 0.6.1 (12.08.24)" TextColor="Wheat" />
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

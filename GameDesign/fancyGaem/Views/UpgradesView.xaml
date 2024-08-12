@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fancyGaem.Views.UpgradesView"
+             Background="#252525"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackLayout Orientation="Vertical">
+                <Label Text="UPGRADES SHOP" FontSize="26" HorizontalOptions="Center" TextColor="Wheat"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="100">
+                    <Label Text="Points Per Click" TextColor="Wheat" HorizontalOptions="Start"/>
+                    <Label Text="Points Per Second!" TextColor="Wheat" HorizontalOptions="End"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="0" x:Name="listPPCUpgrades" HasUnevenRows="True" Margin="2.5"
+                      Background="#404040">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Image Source="placeholder.PNG" Aspect="AspectFit" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Id:" TextColor="White"/>
+                                    <Label Text="{Binding Id}" TextColor="White" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Name:" TextColor="White"/>
+                                    <Label Text="{Binding Name}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Cost:" TextColor="White"/>
+                                    <Label Text="{Binding Cost}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Adds: +" TextColor="White"/>
+                                    <Label Text="{Binding PlusPoints}" TextColor="White"/>
+                                    <Label Text=" PPC!" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Description}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Button Text="(+)" Background="Green" TextColor="White" HeightRequest="40" WidthRequest="45"/>
+                                    <Button Text="(-)" Background="Red" TextColor="White" HeightRequest="40" WidthRequest="45"/>
+                                    <Label Text="B/n" TextColor="White" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView Grid.Column="1" x:Name="listPPSUpgrades" HasUnevenRows="True" Margin="2.5"
+                      Background="#993535">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5">
+                                <Image Source="scenarious.PNG" Aspect="AspectFit" Margin="10" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Id:" TextColor="White"/>
+                                    <Label Text="{Binding Id}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Name:" TextColor="White"/>
+                                    <Label Text="{Binding Name}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Cost:" TextColor="White"/>
+                                    <Label Text="{Binding Cost}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Adds: +" TextColor="White"/>
+                                    <Label Text="{Binding PlusPoints}" TextColor="White"/>
+                                    <Label Text=" PPS!" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Description}" TextColor="White"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Button Text="(+)" Background="Green" TextColor="White" HeightRequest="40" WidthRequest="45"/>
+                                    <Button Text="(-)" Background="Red" TextColor="White" HeightRequest="40" WidthRequest="45"/>
+                                    <Label Text="B/n" TextColor="White" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="2" Text="&lt; Back" Command="{Binding BackToGameCommand}"/>
+            <Button Grid.Column="1" Text="Undo"/>
+            <Button Grid.Column="0" Text="Apply"/>
+        </Grid>
+    </Grid>
+</ContentPage>

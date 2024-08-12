@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fancyGaem.Views.SettingsView"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="&lt; Back" FontSize="Title" Command="{Binding BackToMenuCommand}"/>
+            <Label Text="SETTINGS VIEW" FontSize="Title"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Enable reset button"/>
+                <Switch IsToggled="False" Toggled="Switch_Toggled"/>
+            </StackLayout>
+            <Button x:Name="resetProgressButton" Text="Reset Progress" IsEnabled="False"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

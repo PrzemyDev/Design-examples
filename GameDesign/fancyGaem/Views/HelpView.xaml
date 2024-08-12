@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fancyGaem.Views.HelpView"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="&lt; BACK" FontSize="Title" Command="{Binding BackToMenuCommand}" />
+            <Label Text="Ed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. "
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                LineBreakMode="WordWrap"
+                Margin="5"
+                FontAttributes="Bold"/>
+            <Label Text="Images used: https://www.flaticon.com &#x0a;•Star by flatart_icons,&#x0a;•Sunshine and full-moon by juicy_fish"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                LineBreakMode="WordWrap"
+                Margin="5"
+                FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fancyGaem.Android", "fancyGaem.Android\fancyGaem.Android.csproj", "{479B80D2-458B-4EF7-9783-F3341C8AD38B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fancyGaem", "fancyGaem\fancyGaem.csproj", "{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479B80D2-458B-4EF7-9783-F3341C8AD38B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01CB93A0-D8B6-4CFA-AD36-15B795BBBC9F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF032408-5D16-44D9-97EA-7DB2247DF7B2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:fancyGaem.Views"
+             x:Class="fancyGaem.Views.LoadingView"
+             NavigationPage.HasNavigationBar="False"
+             x:DataType="local:LoadingView">
+    <ContentPage.Background>
+
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="{Binding UpperGradientOffset}"
+              Offset="0.01" />
+            <GradientStop Color="{Binding MiddleGradientOffset}"
+              Offset="0.4" />
+            <GradientStop Color="{Binding LowerGradientOffset}"
+              Offset="1.0" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid" RowDefinitions="*,45,*">
+            <Grid Grid.Row="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label x:Name="Daynlbl" Text="Day" Margin="0,-35,0,0" FontSize="45" FontAttributes="Bold,Italic"
+                       HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                    <Label x:Name="Nitelbl" Text="Night"  
+                           TextColor="Transparent" FontSize="45" FontAttributes="Bold,Italic"
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,-115,0,0">
+                <Label x:Name="welcomeMsglbl" Text="Welcome back!"  
+                   TextColor="#FFD000" FontSize="36" FontAttributes="Italic"
+                   HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Helvetica"
+                   IsVisible="False"/> 
+            </Grid>
+            <Grid Grid.Row="2">
+            <local:ParabolicSlider x:Name="parabolicSlider" HorizontalOptions="Center" />
+                <Label Text="{Binding LoadingGameState}" TextColor="#FFD000" FontSize="Body" FontAttributes="Bold"
+                    VerticalOptions="Start" HorizontalOptions="Center" Margin="5" />
+            </Grid>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
