@@ -1,7 +1,7 @@
 # Design examples
 Android application showcase:</br>
 • <i>New!</i> Clicker Game design (C# - Xamarin.Forms):</br>
-Clicker game with animations, loading screen and more!
+Clicker game with animations, loading screen and more! (the typo is on purpose! ;D)
 
 • Chat app (C# - Xamarin.Forms): </br>
  Chat design with custom encryption and connection settings.  

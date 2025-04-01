@@ -6,12 +6,12 @@ using Xamarin.Forms;
 namespace fancyGaem.Views
 {
     /// <summary>
-    /// Parabolic slider is more than just a slider, but for sake of preview it is mixed!
+    /// Parabolic slider is more than just a slider, but for sake of preview it is view
     /// </summary>
     public class ParabolicSlider : ContentView
     {
         private Image _indicator;
-        private double _sliderWidth = 255; //300 -> 255
+        private double _sliderWidth = 255; //default 300, -> 255
         private double _sliderHeight = 100;
         private int indicatorImageMoveXAxis = 30;
         private int indicatorImageMoveYAxis = 30; 
@@ -22,11 +22,11 @@ namespace fancyGaem.Views
             {
                 WidthRequest = _sliderWidth,
                 HeightRequest = _sliderHeight,
-                //BackgroundColor = Color.Transparent, 
+                //BackgroundColor = Color.Transparent, debug onlyu 
                 Margin = new Thickness(0, 100, 0, 0) 
             };
 
-            // Add parabolic curve (symulacja przy użyciu kilku BoxView)
+            // Add parabolic curve (curve is made with viewBoxes)
             for (int i = 0; i <= _sliderWidth; i += 1)
             {
                 double x = i;
@@ -90,9 +90,9 @@ namespace fancyGaem.Views
 
                 if(_indicator.TranslationX <= _sliderWidth)
                 {
-                    //if (upperRed > 135) upperRed -= 1;
+                    //if (upperRed > 135) upperRed -= 1; debug only
                         if (upperRed < 135  ) upperRed += 1;
-                    //if (upperGreen > 135) upperGreen -=1; 
+                    //if (upperGreen > 135) upperGreen -=1; debug only
                          if (upperGreen < 135) upperGreen += 1;
                     if (upperBlue > 135) upperBlue -= 1;
                     if (middleRed > 40) middleRed -= 1;
@@ -106,7 +106,7 @@ namespace fancyGaem.Views
                 yield return (upperRed, upperGreen, upperBlue, middleRed, middleGreen, middleBlue, lowerRed, lowerGreen, lowerBlue, isDay, daynNiteOpacity);
             }
         }
-        //Colors for linear gradients in loading screen
+        //Colors for linear gradients in loading screen:
         byte upperRed = 0;
         byte upperGreen = 167;
         byte upperBlue = 255;
@@ -117,6 +117,6 @@ namespace fancyGaem.Views
         byte lowerGreen = 255;
         byte lowerBlue = 68;
         bool isDay = true;
-        double daynNiteOpacity = 1.25; // for 1 -0,008, slowed on purpose     
+        double daynNiteOpacity = 1.25; // for 1 -0,008, it is slowed on purpose     
     }
 }

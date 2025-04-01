@@ -157,7 +157,7 @@ namespace fancyGaem.Views
             //5 --ripple
             FramesRippleEffect();
             
-            //the lower the shorter (wave effect), do not put into labels, keep new lines -- labels
+            //The lower the number, the shorter the ripple effect will be, do not put into labels, keep new lines -- labels
             await Task.Delay(150);
             lblUpperThree.IsVisible = false;
             await Task.Delay(200);

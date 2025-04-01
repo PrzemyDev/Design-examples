@@ -56,9 +56,7 @@ namespace RallyApp.ViewModel
                 Time = "...",
                 DiffToFirst = "..."
             });
-
         }
-
     }
 
     public class Result
@@ -69,6 +67,5 @@ namespace RallyApp.ViewModel
         public string Start { get; set; }
         public string Time { get; set; }
         public string DiffToFirst { get; set; }
-
     }
 }

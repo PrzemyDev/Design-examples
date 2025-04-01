@@ -10,7 +10,7 @@ namespace RallyApp
         public App()
         {
             InitializeComponent();
-            //MainPage = new NavigationPage (new NewsPage());
+            //MainPage = new NavigationPage (new NewsPage()); //debug only
             MainPage = new AppShell();
         }
 

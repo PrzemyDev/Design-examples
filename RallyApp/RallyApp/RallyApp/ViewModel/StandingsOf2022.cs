@@ -90,17 +90,16 @@ namespace RallyApp.ViewModel
                 Points = "4"
             });
         }
-       
         }
 
     }
 
     public class Standing
-{
+    {
     public string Position { get; set; }
     public string Driver { get; set; }
     public string Team { get; set; }
     public string Points { get; set; }
-}
+    }
     
 

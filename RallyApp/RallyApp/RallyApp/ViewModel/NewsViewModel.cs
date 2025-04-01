@@ -34,9 +34,7 @@ namespace RallyApp.ViewModel
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Image = "https://rallypl.com/wp-content/uploads/2022/03/5FC76307-87B6-410A-B310-D069BB64951B.jpeg"
             });
-
         }
-
     }
 
         public class Article

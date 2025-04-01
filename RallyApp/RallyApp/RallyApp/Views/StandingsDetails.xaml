@@ -18,7 +18,6 @@
                     <ColumnDefinition Width="2.5*"/>
                     <ColumnDefinition Width="2.5*"/>
                 </Grid.ColumnDefinitions>
-
                 <Label Margin="10,0" Text="Pos" VerticalOptions="Center"  Grid.Column="0" />
                 <Label Margin="10,0" Text="Driver" VerticalOptions="Center"  Grid.Column="1" />
                 <Label Margin="10,0" Text="Team" VerticalOptions="Center"  Grid.Column="2" />
@@ -30,7 +29,6 @@
                 <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
             </Grid>
         </Frame>
-
         <ListView ItemsSource="{Binding Standings}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -43,12 +41,10 @@
                                     <ColumnDefinition Width="2.5*"/>
                                     <ColumnDefinition Width="2.5*"/>
                                 </Grid.ColumnDefinitions>
-
                                 <Label Margin="10,0" Text="{Binding Position}" VerticalOptions="Center"  Grid.Column="0" />
                                 <Label Margin="10,0" Text="{Binding Driver}" VerticalOptions="Center"  Grid.Column="1" />
                                 <Label Margin="10,0" Text="{Binding Team}" VerticalOptions="Center"  Grid.Column="2" />
                                 <Label Margin="10,0" Text="{Binding Points}" VerticalOptions="Center"  Grid.Column="3" />
-
                                 <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
                                 <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
                                 <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
@@ -60,5 +56,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>

@@ -64,7 +64,6 @@
                     <Label Text="2022: Drugie miejsce: European Le Mans Series (LMP2)"
                        FontSize="16" />
                 </StackLayout>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

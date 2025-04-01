@@ -15,7 +15,6 @@
 
         <Grid>
             <StackLayout Orientation="Vertical">
-                
                     <StackLayout Orientation="Horizontal" Spacing="0">
                     <Grid ColumnDefinitions="3.2*,*,Auto" BackgroundColor="DarkOrange">
                         <SearchBar x:Name="SearchBarCompetitor" Placeholder="Wyszukaj" TextChanged="SearchBar_TextChanged" Grid.Column="0"
@@ -27,8 +26,6 @@
                                  Margin="5,5" HorizontalOptions="End"/>
                     </Grid>
                 </StackLayout>
-                
-
                 <ListView x:Name="CompetitorsList" ItemsSource="{Binding Competitors}" HasUnevenRows="True" SeparatorVisibility="Default" 
                   ItemTapped="ListView_ItemTapped">
                     <ListView.ItemTemplate>

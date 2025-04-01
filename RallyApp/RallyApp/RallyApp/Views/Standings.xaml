@@ -17,8 +17,7 @@
             <Image Source="pexelsAbdulamidAlfadhlyEncBg.jpg" Aspect="AspectFill" />
             <CollectionView ItemsSource="{Binding Seasons}" 
                     ItemsLayout="VerticalGrid, 3"
-                     SelectionChanged="CollectionView_SelectionChanged" SelectionMode="Single"
-                           >
+                     SelectionChanged="CollectionView_SelectionChanged" SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">

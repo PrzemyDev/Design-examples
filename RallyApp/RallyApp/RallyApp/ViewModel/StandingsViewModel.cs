@@ -11,7 +11,6 @@ namespace RallyApp.ViewModel
         public StandingsViewModel()
         {
             Seasons = new ObservableCollection<Season>();
-
             Seasons.Add(new Season
             {
                 SeasonNumber = "2022",
@@ -33,7 +32,6 @@ namespace RallyApp.ViewModel
                 Image = "https://images.squarespace-cdn.com/content/v1/57d9e959d482e972e8434364/1577822088074-T14DXQ66KYEXCH4JKHVE/shutterstock_1061056634.jpg?format=1000w"
             });
         }
-
     }
 
     public class Season

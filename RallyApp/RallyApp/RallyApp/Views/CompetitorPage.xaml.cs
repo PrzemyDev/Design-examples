@@ -34,7 +34,8 @@ namespace RallyApp.Views
         
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            /*var tempCompList = competitorsViewModel.Competitors;
+            /*Left comments below for learning purposes.
+            var tempCompList = competitorsViewModel.Competitors;
             CompetitorsList.ItemsSource = tempCompList.Where(x => x.Name.StartsWith(e.NewTextValue) || x.Surname.StartsWith(e.NewTextValue));*/
             var tempCompList = competitorsViewModel.Competitors;
             if (NationalityPicker.SelectedIndex == -1 || NationalityPicker.SelectedItem.ToString() == "")
@@ -66,7 +67,7 @@ namespace RallyApp.Views
 
         private void TemporaryVoid(ref string flagtest, ref string result)
         {
-            //it will be better to add another property to competitor but let's just pretend it is in specification. For now ;)
+            //it will be better to add another property to competitor but let's just pretend it is in specification for now
             
             switch (flagtest)
             {
